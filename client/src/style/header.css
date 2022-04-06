@@ -1,44 +1,53 @@
-
 * {
     background-color: rgb(73, 174, 216)
 }
 
 
-a:hover {
-    background-color: rgb(37, 126, 209);
+li:hover {
+    background-color: rgb(198, 201, 62);
+    border-radius: 20px;
 }
 
 .allHolder {
-    display:flex;
+    margin-top: 5%;
+    display: flex;
     flex-direction: column;
     background-color: rgb(73, 174, 216);
 }
 
-.imageAndTitle {
-    background-color: rgb(73, 174, 216);
-}
 
 .titleHolder {
     background-color: rgb(73, 174, 216);
 }
 
 .logo {
-    background-color: black;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent;
+    animation-name: titleMove;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 .navbarUl {
     list-style: none;
     display: flex;
     align-items: center;
+    margin: 0 auto;
     flex-direction: row;
-    
+    width: 80%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 1%;
+    border-radius: 20px;
+    background-color: rgb(230, 75, 204);
 }
 
 .navTab {
     margin: 0 auto;
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    width: 10%;
 }
 
 .title {
@@ -47,3 +56,43 @@ a:hover {
     width: 40%;
     padding: 5%;
 }
+
+
+
+/* extra extra */
+
+@keyframes titleMove {
+    0% {
+        left: 10px;
+        top: 0px;
+    }
+
+    25% {
+        left: -10px;
+        top: 0px;
+    }
+
+    50% {
+        left: 10px;
+        top: 0px;
+    }
+
+    75% {
+        left: -10px;
+        top: 0px;
+    }
+
+    100% {
+        left: 10px;
+        top: 0px;
+    }
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
