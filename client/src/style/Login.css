@@ -12,7 +12,7 @@
     height: 40%;
     margin: 0 auto;
     margin-bottom: 5%;
-    background-color: rgb(49, 165, 107);
+    background-color: rgb(46,63,145);
 }
 
 button:hover {
@@ -20,15 +20,14 @@ button:hover {
 }
 
 .greetingHolder {
-    background-color: rgb(49, 165, 107);
+    background-color: rgb(46,63,145);
 }
 
 .greeting {
+    
     border: 1px solid;
-    padding: 2px;
     border-radius: 15px;
     width: 100%;
-    transform: rotate(360deg);
 }
 
 
@@ -46,6 +45,7 @@ button:hover {
 
 .userInput {
     margin-top: 5%;
+    background-color: white;
 }
 
 .loginBtn{
@@ -54,5 +54,6 @@ button:hover {
     margin-bottom: 5%;
     width: 60%;
     height: 100%;
-    background-color: rgb(43, 135, 151);
+    background-color: rgb(46,63,145);
+    
 }
