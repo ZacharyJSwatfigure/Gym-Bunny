@@ -1,7 +1,7 @@
 import './App.css';
 import './style/header.css';
 import NavContainer from './NavContainer';
-import bunny from './img/buffBunny.png';
+import bunny from './img/gymBunnyLogoMedium.gif';
 // import WorkoutList from './components/PracticeAPI';
 
 function App() {
@@ -15,10 +15,7 @@ function App() {
           <section className="logo">
             <img src = { bunny }></img>
           </section>
-          {/* this is the title conatiner */}
-          <section className='titleHolder'>
-            <h1 className='title'>Gym Bunny</h1>
-          </section>
+        
         </section>
 
 
