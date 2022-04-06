@@ -10,6 +10,7 @@
     width: 40%;
     height: 40%;
     margin: 0 auto;
+    margin-top: 5%;
     margin-bottom: 5%;
     background-color: rgb(46, 63, 145);
 }
@@ -41,7 +42,6 @@ button:hover {
     width: 80%;
     height: 80%;
     margin: 5%;
-    
 
 }
 
