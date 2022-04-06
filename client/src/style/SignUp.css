@@ -9,16 +9,13 @@
     width: 40%;
     height: 40%;
     margin: 0 auto;
-    background-color: rgb(49, 165, 107);
+    
 }
 
 button:hover {
     background-color: green;
 }
 
-.greetingHolder {
-    background-color: rgb(49, 165, 107);
-}
 
 .greeting {
     border: 1px solid;

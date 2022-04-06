@@ -4,8 +4,9 @@
 
 
 li:hover {
-    background-color: rgb(198, 201, 62);
-    border-radius: 20px;
+    background-color: rgb(159, 175, 218);
+    border-radius: 1000px;
+    
 }
 
 .allHolder {
@@ -25,7 +26,7 @@ li:hover {
     position: relative;
     background-color: transparent;
     animation-name: titleMove;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
 }
 
@@ -87,12 +88,3 @@ li:hover {
         top: 0px;
     }
 }
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-    /* If you want dots under the hoverable text */
-}
-
