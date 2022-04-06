@@ -1,20 +1,25 @@
 
 * {
-    background-color: rgb(174, 138, 207)
+    background-color: rgb(73, 174, 216)
 }
 
 
 a:hover {
-    background-color: rgb(34, 209, 72);
+    background-color: rgb(37, 126, 209);
 }
 
 .allHolder {
     display:flex;
     flex-direction: column;
+    background-color: rgb(73, 174, 216);
 }
 
 .imageAndTitle {
-    background-color: rgb(31, 187, 161);
+    background-color: rgb(73, 174, 216);
+}
+
+.titleHolder {
+    background-color: rgb(73, 174, 216);
 }
 
 .logo {
@@ -24,16 +29,21 @@ a:hover {
     margin: 10px;
 }
 
-
 .navbarUl {
     list-style: none;
     display: flex;
     align-items: center;
     flex-direction: row;
+    
 }
-
 
 .navTab {
     margin: 0 auto;
-    
+}
+
+.title {
+    margin: 0 auto;
+    background-color: rgb(73, 174, 216);
+    width: 40%;
+    padding: 5%;
 }

@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(174, 138, 207)
+    background-color: rgb(33, 34, 39);
 }
 
 .workoutBox {
@@ -14,3 +14,5 @@
     border: 1px solid black;
     border-radius: 20px;
 }
+
+/* rgb(64, 102, 138); */
