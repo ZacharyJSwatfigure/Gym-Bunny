@@ -6,7 +6,7 @@
 li:hover {
     background-color: rgb(159, 175, 218);
     border-radius: 1000px;
-    
+
 }
 
 .allHolder {
@@ -17,19 +17,6 @@ li:hover {
 }
 
 
-.titleHolder {
-    background-color: rgb(73, 174, 216);
-}
-
-.logo {
-    margin: 0 auto;
-    position: relative;
-    background-color: transparent;
-    animation-name: titleMove;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-}
-
 .navbarUl {
     list-style: none;
     display: flex;
@@ -38,7 +25,7 @@ li:hover {
     flex-direction: row;
     width: 80%;
     margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: .5%;
     padding: 1%;
     border-radius: 20px;
     background-color: rgb(230, 75, 204);
@@ -87,4 +74,42 @@ li:hover {
         left: 10px;
         top: 0px;
     }
+}
+
+.imgSm {
+    display: none;
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent;
+    animation-name: titleMove;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.imgMed {
+    display: none;
+    margin: 0 auto;
+    margin-top: 4%;
+    position: relative;
+    background-color: transparent;
+    animation-name: titleMove;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 600px) {
+    .imgSm {
+        display: flex;
+        margin-top: 10%;
+    }
+    .navbarUl {
+        margin-top: 10%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .imgMed {
+        display: flex;
+    }
+    
 }

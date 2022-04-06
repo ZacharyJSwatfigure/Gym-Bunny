@@ -1,6 +1,5 @@
-
 .loginAllHolder {
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,7 +11,7 @@
     height: 40%;
     margin: 0 auto;
     margin-bottom: 5%;
-    background-color: rgb(46,63,145);
+    background-color: rgb(46, 63, 145);
 }
 
 button:hover {
@@ -20,14 +19,16 @@ button:hover {
 }
 
 .greetingHolder {
-    background-color: rgb(46,63,145);
+    background-color: rgb(46, 63, 145);
 }
 
 .greeting {
-    
+
     border: 1px solid;
     border-radius: 15px;
     width: 100%;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(230, 75, 204);
 }
 
 
@@ -41,6 +42,7 @@ button:hover {
     height: 80%;
     margin: 5%;
     
+
 }
 
 .userInput {
@@ -48,12 +50,29 @@ button:hover {
     background-color: white;
 }
 
-.loginBtn{
+.loginBtn {
     border-radius: 15px;
-    margin-top: 5%;
+    margin-top: 7%;
     margin-bottom: 5%;
     width: 60%;
     height: 100%;
-    background-color: rgb(46,63,145);
-    
+    background-color: rgb(230, 75, 204);
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .loginAllHolder {
+        margin-top: 20%;
+        width: 80%;
+        height: 300px;
+    }
+    .loginBtn {
+        height: 20%;
+    }
+    .userInput {
+        height: 20px;
+    }
+
 }

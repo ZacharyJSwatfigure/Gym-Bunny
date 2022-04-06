@@ -2,24 +2,22 @@ import './App.css';
 import './style/header.css';
 import NavContainer from './NavContainer';
 import bunny from './img/gymBunnyLogoMedium.gif';
+import bunnySm from './img/gymBunnyLogoSmall.gif';
+
 // import WorkoutList from './components/PracticeAPI';
 
 function App() {
   return (
     <div className="App">
       {/* this is the nav header container */}
+      <img className='imgMed' src={bunny}></img>
+      <img className='imgSm' src={bunnySm}></img>
+
       <header className="allHolder">
-        {/* this is the container holding title and logo */}
-        <section className="imageAndTitle">
-          {/* this is the logo container */}
-          <section className="logo">
-            <img src = { bunny }></img>
-          </section>
-        
-        </section>
 
 
-        <NavContainer/>
+
+        <NavContainer />
 
       </header>
       {/* <WorkoutList /> */}
