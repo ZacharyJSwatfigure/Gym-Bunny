@@ -1,0 +1,10 @@
+{
+  "id": "GUID",
+  "email": "something@other.com",
+  "password": "MyAmazingPassword123",
+  "name": "Amber Anouk",
+  "unit": "lbs",
+  "height": 5.1,
+  "weight": "error",
+  "gender": "female"
+}

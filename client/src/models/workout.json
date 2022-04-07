@@ -1,0 +1,62 @@
+{
+  "id": "GUID",
+  "userId": "GUID",
+  "unit": "lbs",
+  "date": "04-06-2022",
+  "elapsedTime": "36 minutes",
+  "bodySections": [
+    "Upper"
+  ],
+  "bodyParts": [
+    "Arms",
+    "Chest"
+  ],
+  "exercises": [
+    {
+      "name": "Tricep dip",
+      "bodySection": "Upper",
+      "bodyPart": "Arms",
+      "description": "Dip those triceps.",
+      "sets": [
+        {
+          "repetions": 8,
+          "weight": 45,
+          "type": "dropset"
+        },
+        {
+          "repetions": 8,
+          "weight": 40,
+          "type": "dropset"
+        },
+        {
+          "repetions": 8,
+          "weight": 35,
+          "type": "dropset"
+        }
+      ]
+    },
+    {
+      "name": "Bench press",
+      "bodySection": "Upper",
+      "bodyPart": "Chest",
+      "description": "Press that bench down!",
+      "sets": [
+        {
+          "repetions": 8,
+          "weight": 45,
+          "type": "dropset"
+        },
+        {
+          "repetions": 8,
+          "weight": 40,
+          "type": "dropset"
+        },
+        {
+          "repetions": 8,
+          "weight": 35,
+          "type": "dropset"
+        }
+      ]
+    }
+  ]
+}
