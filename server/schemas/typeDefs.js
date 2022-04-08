@@ -23,15 +23,15 @@ const typeDefs = gql`
         focus: Focus
     }
     
- enum Focus {
-   ABS
-   ARMS
-   CHEST
-   CALVES
-   BACK
-   LEGS
-   SHOULDERS
- }
+    enum Focus {
+        ABS
+        ARMS
+        CHEST
+        CALVES
+        BACK
+        LEGS
+        SHOULDERS
+    }
 
     type Query {
         user(id: String!): User

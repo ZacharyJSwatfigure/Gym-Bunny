@@ -9,9 +9,7 @@ export default function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
-    const [loginMutation,] = useMutation(LOGIN);
-    const newUser = '';
-    console.log()
+    // const [loginMutation,] = useMutation(LOGIN, {email: username, password: password});
 
     return (
         <div className="loginAllHolder">
@@ -25,11 +23,10 @@ export default function Login() {
 
                 <input className='userInput' type="Password" placeholder='Password' onChange={event => setPassword(event.target.value)} />
 
-                <button className='loginBtn' type='submit' onClick={(username, password, newUser) => {
-                    newUser = {
-                        username,
-                        password
-                    };
+                <button className='loginBtn' type='submit' onClick={ () => {
+                    
+                    // loginMutation()
+                    
 
                 }} >Log In</button>
 
