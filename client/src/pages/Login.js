@@ -23,9 +23,15 @@ export default function Login() {
 
                 <input className='userInput' type="Password" placeholder='Password' onChange={event => setPassword(event.target.value)} />
 
-                <button className='loginBtn' type='submit' onClick={ () => {
+                <button className='loginBtn' type='submit' onClick={ async ( username, password) => {
                     
-                    // loginMutation()
+                    
+                    if ( username.length < 0 || password.length < 0) {
+                        return (error + 'Please enter a valid username and/or password.')
+                    } else {
+                        await
+                        // this is where i finished up
+                    }
                     
 
                 }} >Log In</button>

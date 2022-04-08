@@ -22,15 +22,14 @@ const resolvers = {
 	},
 	Mutation: {
 		// Sign up
-		createUser: async (_root, {firstName, lastName, email, password}) => {
+		createUser: async (_root, {username, email, password}) => {
 			const user = await User.create({
-				firstName,
-				lastName,
+				username,
 				email,
 				password,
 			});
 
-			const token = utils.signToken(user.firstName, user._id);
+			const token = utils.signToken(user.username, user._id);
 			return {token, user};
 		},
 		login: async (_root, {email, password}) => {
@@ -40,7 +39,7 @@ const resolvers = {
 				throw new AuthorizationError('No user found with this email');
 			}
 			if (userFound.password === password) {
-				const token = utils.signToken(userFound.firstName, userFound._id);
+				const token = utils.signToken(userFound.username, userFound._id);
 				return {token, userFound};
 			}
 			throw new AuthorizationError('You must provide correct credentials');
@@ -55,11 +54,11 @@ const resolvers = {
 	},
 
 	User: {
-		fullName: (root) => {
-			return `${root.firstName} ${root.lastName}`;
+		username: (root) => {
+			return `${root.username}`;
 		},
 		nameLength: (root) => {
-			return root.firstName.length;
+			return root.username.length;
 		},
 		workouts: async  (root) => {
 			return await Workout.find({
