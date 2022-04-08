@@ -20,7 +20,6 @@ export default function Search() {
                         </div>
                     </div>
                 </h1>
-                
             </section>
         </form>
     );
