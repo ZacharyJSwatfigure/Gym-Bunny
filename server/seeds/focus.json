@@ -18,41 +18,41 @@
   {
     "focus": "back",
     "workouts": [
-      "crunches",
-      "sit ups",
-      "Russian Twists"
+      "deadlifts",
+      "pull ups",
+      "rows"
     ]
   },
   {
     "focus": "calves",
     "workouts": [
-      "crunches",
-      "sit ups",
-      "Russian Twists"
+      "leg press",
+      "cardio",
+      "jump rope"
     ]
   },
   {
     "focus": "chest",
     "workouts": [
-      "crunches",
-      "sit ups",
-      "Russian Twists"
+      "pushups",
+      "bench",
+      "plank"
     ]
   },
   {
     "focus": "legs",
     "workouts": [
-      "crunches",
-      "sit ups",
-      "Russian Twists"
+      "squats",
+      "leg press",
+      "lunges"
     ]
   },
   {
     "focus": "shoulders",
     "workouts": [
-      "crunches",
-      "sit ups",
-      "Russian Twists"
+      "shoulder press",
+      "bar bell press",
+      "dumbell pull ups"
     ]
   }
 ]
