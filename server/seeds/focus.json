@@ -1,0 +1,58 @@
+[
+  {
+    "focus": "abs",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "russian Twists"
+    ]
+  },
+  {
+    "focus": "arms",
+    "workouts": [
+      "Curls",
+      "Rows",
+      "bench"
+    ]
+  },
+  {
+    "focus": "back",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "Russian Twists"
+    ]
+  },
+  {
+    "focus": "calves",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "Russian Twists"
+    ]
+  },
+  {
+    "focus": "chest",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "Russian Twists"
+    ]
+  },
+  {
+    "focus": "legs",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "Russian Twists"
+    ]
+  },
+  {
+    "focus": "shoulders",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "Russian Twists"
+    ]
+  }
+]

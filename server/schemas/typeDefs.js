@@ -5,9 +5,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
     type User {
         _id: ID
-        firstName: String
-        lastName: String
-        fullName: String
+        username: String
         nameLength: Int
         email: String
         workouts: [Workout]
@@ -22,7 +20,19 @@ const typeDefs = gql`
         completed: Boolean
         userId: String
         user: User
+        + focus: Focus
     }
+    
++ enum Focus {
++   ABS
++   ARMS
++   CHEST
++   CALVES
++   BACK
++   LEGS
++   SHOULDERS
++ }
+
     type Query {
         user(id: String!): User
         users: [User]
