@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Search.css';
-import WorkoutList from '../components/PracticeAPI';
+
 
 export default function Search() {
     return (
@@ -20,7 +20,7 @@ export default function Search() {
                         </div>
                     </div>
                 </h1>
-                <WorkoutList/>
+                
             </section>
         </form>
     );
