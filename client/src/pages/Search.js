@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/Search.css';
 
+
 export default function Search() {
     return (
         <form>
