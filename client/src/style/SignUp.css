@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
     padding: 2px;
     border-radius: 15px;
     width: 40%;
@@ -18,7 +17,6 @@ button:hover {
 
 
 .greeting {
-    border: 1px solid;
     padding: 2px;
     border-radius: 15px;
     width: 100%;
@@ -31,7 +29,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
     width: 80%;
     height: 80%;
     margin: 5%;
