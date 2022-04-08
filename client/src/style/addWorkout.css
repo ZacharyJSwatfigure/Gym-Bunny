@@ -3,7 +3,7 @@
 }
 
 .workoutBox {
-    border: 1px solid black;
+    
     border-radius: 20px;
     margin: 5%;
 }
@@ -11,7 +11,6 @@
 .addToWorkout {
     background-color: rgb(113, 224, 113);
     margin-bottom: 3%;
-    border: 1px solid black;
     border-radius: 20px;
 }
 

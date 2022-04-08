@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
+
     padding: 2px;
     border-radius: 15px;
     width: 40%;
@@ -24,8 +24,6 @@ button:hover {
 }
 
 .greeting {
-
-    border: 1px solid;
     border-radius: 15px;
     width: 100%;
     font-family: 'Oswald', sans-serif;
@@ -38,7 +36,6 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
     width: 80%;
     height: 80%;
     margin: 5%;
@@ -52,6 +49,7 @@ button:hover {
 
 .loginBtn {
     border-radius: 15px;
+    border: none;
     margin-top: 7%;
     margin-bottom: 5%;
     width: 60%;
