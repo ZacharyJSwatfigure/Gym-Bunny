@@ -8,11 +8,13 @@ const db = require('./config/connection');
 const server = new ApolloServer({
 	resolvers,
 	typeDefs,
-	context: ({ req, res }) => {
+	// has req as part of the params
+	context: ({ req }) => {
 		const token = req.headers.authorization;
 
 		// if no token no user is logged in
-		if (token.length === 0) {
+		// had .lenght attached to this
+		if (!token) {
 			return req;
 		}
 
