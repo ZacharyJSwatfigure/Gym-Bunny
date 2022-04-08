@@ -20,18 +20,18 @@ const typeDefs = gql`
         completed: Boolean
         userId: String
         user: User
-        + focus: Focus
+        focus: Focus
     }
     
-+ enum Focus {
-+   ABS
-+   ARMS
-+   CHEST
-+   CALVES
-+   BACK
-+   LEGS
-+   SHOULDERS
-+ }
+ enum Focus {
+   ABS
+   ARMS
+   CHEST
+   CALVES
+   BACK
+   LEGS
+   SHOULDERS
+ }
 
     type Query {
         user(id: String!): User
