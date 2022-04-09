@@ -11,7 +11,8 @@ db.once('open', async () => {
                 "workouts": [
                     "crunches",
                     "sit ups",
-                    "russian Twists"
+                    "russian Twists",
+                    "planks"
                 ]
             },
             {
