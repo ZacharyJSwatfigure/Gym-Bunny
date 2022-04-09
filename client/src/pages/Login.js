@@ -1,15 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../style/Login.css';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../graphql/mutations/login';
+import Auth from '../utils/auth';
 
-import '../style/Login.css';
+
+
 
 export default function Login() {
 
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
+    const [formState, setFormState] = React.useState({
+        username: "",
+        password: ""
+    })
 
-    // const [loginMutation,] = useMutation(LOGIN, {email: username, password: password});
+    const [login] = useMutation(LOGIN);
+
+    const submitForm = async (event) => {
+        event.preventDefault();
+        const response = await login({
+            variables: {
+                username: formState.username,
+                password: formState.password
+            }
+        })
+        const token = response.data.login.token
+        Auth.login(token)
+        setFormState({
+            username: "",
+            password: ""
+        })
+    }
+
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setFormState({
+            ...formState,
+            [name]: value,
+        })
+    }
+
 
     return (
         <div className="loginAllHolder">
@@ -17,26 +47,24 @@ export default function Login() {
                 <h1 className="greeting">Login</h1>
             </section>
 
-            <section className='loginInfoHolder'>
+            <form className='loginInfoHolder' onSubmit={submitForm}>
 
-                <input className='userInput' type="Text" placeholder='Username' onChange={event => setUsername(event.target.value)} />
 
-                <input className='userInput' type="Password" placeholder='Password' onChange={event => setPassword(event.target.value)} />
+                <input name='username' className='userInput' type="Text" placeholder='Username' onChange={handleChange} />
 
-                <button className='loginBtn' type='submit' onClick={ async ( username, password) => {
-                    
-                    
-                    // if ( username.length < 0 || password.length < 0) {
-                    //     return (error + 'Please enter a valid username and/or password.')
-                    // } else {
-                    //     await
-                    //     // this is where i finished up
-                    // }
+                <input name='password' className='userInput' type="Password" placeholder='Password' onChange={handleChange} />
+
+
+                <button className='loginBtn' type='submit'
+
                     
 
-                }} >Log In</button>
+                >
+                    Login</button>
 
-            </section>
+
+
+            </form>
         </div>
     );
 }

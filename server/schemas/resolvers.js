@@ -33,8 +33,8 @@ const resolvers = {
 			const token = utils.signToken(user.username, user._id);
 			return {token, user};
 		},
-		login: async (_root, {email, password}) => {
-			const userFound = await User.findOne({email});
+		login: async (_root, {username, password}) => {
+			const userFound = await User.findOne({username});
 
 			if (!userFound) {
 				throw new AuthenticationError('No user found with this email');
