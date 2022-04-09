@@ -1,28 +1,27 @@
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
+const {ApolloServer} = require('apollo-server-express');
 const jwt = require('jsonwebtoken');
 const utils = require('./utils');
-const { resolvers, typeDefs, } = require('./schemas');
+const {resolvers, typeDefs,} = require('./schemas');
 const db = require('./config/connection');
 
 const server = new ApolloServer({
 	resolvers,
 	typeDefs,
-	// has req as part of the params
-	context: ({ req }) => {
+	context: ({req, res}) => {
 		const token = req.headers.authorization;
 
-		// if no token no user is logged in
-		// had .lenght attached to this
-		if (!token) {
-			return req;
-		}
+		
+
+		// if (token.length === 0) {
+		// 	return req;
+		// }
 
 		try {
-			const { data } = jwt.verify(token, utils.secret);
+			const {data} = jwt.verify(token, utils.secret);
 			req.user = data;
 		} catch (e) {
-			return { error: 'Invalid token' };
+			return {error: 'Invalid token'};
 		}
 
 		return {
@@ -39,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 
 db.once('open', async () => {
 	await server.start();
-	// creates a /graphql endpoint for our server
+
 	server.applyMiddleware({ app });
 	app.listen(PORT, () => console.log('Server running on PORT 3001'));
 
