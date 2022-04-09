@@ -1,4 +1,4 @@
-const {AuthorizationError} = require('apollo-server-express');
+const {AuthenticationError} = require('apollo-server-express');
 const {Workout, User} = require('../models');
 const utils = require('../utils');
 
@@ -8,10 +8,11 @@ const resolvers = {
 			return await User.findById(id);
 		},
 		users: async (_root, _args, context) => {
-			if (!context.req.user) {
-				throw new AuthorizationError('You must be logged in to do that');
-			}
-			return await User.find({});
+			// if (context.user) {
+				
+				return await User.find({});
+			// }
+			// throw new AuthenticationError('You must be logged in to do that');
 		},
 		workout: async (_root, {id}) => {
 			return await Workout.findById(id);
@@ -36,13 +37,13 @@ const resolvers = {
 			const userFound = await User.findOne({email});
 
 			if (!userFound) {
-				throw new AuthorizationError('No user found with this email');
+				throw new AuthenticationError('No user found with this email');
 			}
 			if (userFound.password === password) {
 				const token = utils.signToken(userFound.username, userFound._id);
 				return {token, userFound};
 			}
-			throw new AuthorizationError('You must provide correct credentials');
+			throw new AuthenticationError('You must provide correct credentials');
 		},
 		createWorkout: async (_root, {exercise, userId, completed}) => {
 			return await Workout.create({
@@ -69,6 +70,14 @@ const resolvers = {
 	Workout: {
 		user: async (root) => {
 			return await User.findById(root.userId);
+		}
+	},
+	Focus: {
+		ARMS: 'arms'
+	},
+	Query: {
+		focus(_, {bodyPart}) {
+			return bodyPart;
 		}
 	}
 };

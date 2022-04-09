@@ -1,6 +1,7 @@
 /* typeDefs is short for typeDefinitions */
 const { gql } = require('apollo-server-express');
 
+
 // Queries and Mutations
 const typeDefs = gql`
     type User {
@@ -32,8 +33,10 @@ const typeDefs = gql`
         LEGS
         SHOULDERS
     }
+    
 
     type Query {
+        focus(bodyPart: Focus): String
         user(id: String!): User
         users: [User]
         workout(id: String!): Workout
