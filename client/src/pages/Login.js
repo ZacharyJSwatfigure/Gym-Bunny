@@ -26,12 +26,12 @@ export default function Login() {
                 <button className='loginBtn' type='submit' onClick={ async ( username, password) => {
                     
                     
-                    if ( username.length < 0 || password.length < 0) {
-                        return (error + 'Please enter a valid username and/or password.')
-                    } else {
-                        await
-                        // this is where i finished up
-                    }
+                    // if ( username.length < 0 || password.length < 0) {
+                    //     return (error + 'Please enter a valid username and/or password.')
+                    // } else {
+                    //     await
+                    //     // this is where i finished up
+                    // }
                     
 
                 }} >Log In</button>

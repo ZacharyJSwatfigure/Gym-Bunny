@@ -9,7 +9,6 @@ const typeDefs = gql`
         username: String
         nameLength: Int
         email: String
-        workouts: [Workout]
     }
     type Auth {
         token: String
@@ -17,26 +16,14 @@ const typeDefs = gql`
     }
     type Workout {
         _id: ID
-        exercise: String
-        completed: Boolean
-        userId: String
-        user: User
-        focus: Focus
+        focus: String
+        workouts: [String]
     }
     
-    enum Focus {
-        ABS
-        ARMS
-        CHEST
-        CALVES
-        BACK
-        LEGS
-        SHOULDERS
-    }
     
 
     type Query {
-        focus(bodyPart: Focus): String
+
         user(id: String!): User
         users: [User]
         workout(id: String!): Workout
@@ -45,7 +32,6 @@ const typeDefs = gql`
     type Mutation {
         createUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        createWorkout(workout: String!, userId: String!, completed: Boolean): Workout
     }
 `;
 

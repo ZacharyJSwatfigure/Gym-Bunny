@@ -1,15 +1,16 @@
 const { Schema, model } = require('mongoose');
 
 const workoutSchema = new Schema({
-	exercise: String,
-	completed: {
-		type: Boolean,
-		default: false,
+	focus:{
+		type: String,
+		required: true,
+		trim: true
 	},
-	userId: {
-		type: Schema.Types.ObjectId,
-		ref: 'User',
-	},
+	workouts: [{
+		type: String,
+		required: true,
+		trim: true
+	}]
 });
 
 module.exports = model('Workout', workoutSchema);

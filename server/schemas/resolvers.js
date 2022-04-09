@@ -45,13 +45,6 @@ const resolvers = {
 			}
 			throw new AuthenticationError('You must provide correct credentials');
 		},
-		createWorkout: async (_root, {exercise, userId, completed}) => {
-			return await Workout.create({
-				exercise,
-				userId,
-				completed
-			});
-		}
 	},
 
 	User: {
@@ -61,25 +54,8 @@ const resolvers = {
 		nameLength: (root) => {
 			return root.username.length;
 		},
-		workouts: async  (root) => {
-			return await Workout.find({
-				userId: root._id,
-			});
-		}
 	},
-	Workout: {
-		user: async (root) => {
-			return await User.findById(root.userId);
-		}
-	},
-	Focus: {
-		ARMS: 'arms'
-	},
-	Query: {
-		focus(_, {bodyPart}) {
-			return bodyPart;
-		}
-	}
+	
 };
 
 module.exports = resolvers;
