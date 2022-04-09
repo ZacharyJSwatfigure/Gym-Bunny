@@ -1,62 +1,58 @@
-{
-  "id": "GUID",
-  "userId": "GUID",
-  "unit": "lbs",
-  "date": "04-06-2022",
-  "elapsedTime": "36 minutes",
-  "bodySections": [
-    "Upper"
-  ],
-  "bodyParts": [
-    "Arms",
-    "Chest"
-  ],
-  "exercises": [
-    {
-      "name": "Tricep dip",
-      "bodySection": "Upper",
-      "bodyPart": "Arms",
-      "description": "Dip those triceps.",
-      "sets": [
-        {
-          "repetions": 8,
-          "weight": 45,
-          "type": "dropset"
-        },
-        {
-          "repetions": 8,
-          "weight": 40,
-          "type": "dropset"
-        },
-        {
-          "repetions": 8,
-          "weight": 35,
-          "type": "dropset"
-        }
-      ]
-    },
-    {
-      "name": "Bench press",
-      "bodySection": "Upper",
-      "bodyPart": "Chest",
-      "description": "Press that bench down!",
-      "sets": [
-        {
-          "repetions": 8,
-          "weight": 45,
-          "type": "dropset"
-        },
-        {
-          "repetions": 8,
-          "weight": 40,
-          "type": "dropset"
-        },
-        {
-          "repetions": 8,
-          "weight": 35,
-          "type": "dropset"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "focus": "abs",
+    "workouts": [
+      "crunches",
+      "sit ups",
+      "russian Twists"
+    ]
+  },
+  {
+    "focus": "arms",
+    "workouts": [
+      "Curls",
+      "Rows",
+      "bench"
+    ]
+  },
+  {
+    "focus": "back",
+    "workouts": [
+      "deadlifts",
+      "pull ups",
+      "rows"
+    ]
+  },
+  {
+    "focus": "calves",
+    "workouts": [
+      "leg press",
+      "cardio",
+      "jump rope"
+    ]
+  },
+  {
+    "focus": "chest",
+    "workouts": [
+      "pushups",
+      "bench",
+      "plank"
+    ]
+  },
+  {
+    "focus": "legs",
+    "workouts": [
+      "squats",
+      "leg press",
+      "lunges"
+    ]
+  },
+  {
+    "focus": "shoulders",
+    "workouts": [
+      "shoulder press",
+      "bar bell press",
+      "dumbell pull ups"
+    ]
+  }
+]
