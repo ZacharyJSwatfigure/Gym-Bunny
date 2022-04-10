@@ -1,0 +1,15 @@
+.currentUserHolder {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    
+}
+
+.currentUser {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(46, 63, 145);
+    padding: 1%;
+    border-radius: 20px;
+}
