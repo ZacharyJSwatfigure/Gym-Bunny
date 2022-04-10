@@ -23,6 +23,7 @@ export default function Login() {
                 username: formState.username,
                 password: formState.password
             }
+            
         })
         const token = response.data.login.token
         Auth.login(token)
@@ -30,10 +31,12 @@ export default function Login() {
             username: "",
             password: ""
         })
+        window.localStorage.setItem('username', formState.username);
     }
 
     const handleChange = (event) => {
         const { name, value } = event.target
+
         setFormState({
             ...formState,
             [name]: value,
@@ -43,9 +46,11 @@ export default function Login() {
 
     return (
         <div className="loginAllHolder">
+            
             <section className="greetingHolder">
                 <h1 className="greeting">Login</h1>
             </section>
+            
 
             <form className='loginInfoHolder' onSubmit={submitForm}>
 
@@ -57,7 +62,7 @@ export default function Login() {
 
                 <button className='loginBtn' type='submit'
 
-                    
+
 
                 >
                     Login</button>

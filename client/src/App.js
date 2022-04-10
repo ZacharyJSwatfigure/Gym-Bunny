@@ -1,6 +1,7 @@
 import './App.css';
 import './style/header.css';
 import NavContainer from './NavContainer';
+import CurrentUser from './components/CurrentUser';
 import bunny from './img/gymBunnyLogoMedium.gif';
 import bunnySm from './img/gymBunnyLogoSmall.gif';
 
@@ -15,7 +16,7 @@ function App() {
 
       <header className="allHolder">
 
-
+        <CurrentUser />
 
         <NavContainer />
 
