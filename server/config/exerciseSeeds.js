@@ -394,6 +394,104 @@
     "focusId": 4,
     "focus": calves,
   },
-
-
+  {
+    "name": "Pushups",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Bench",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Plank",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Incline barbell bench press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Guillotine 'neck' press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Incline dumbbell bench press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Dumbbell pullover",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Dumbbell chest fly",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Dumbbell floor press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Decline dumbbell bench press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Cable chest fly",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Cable crossover",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Flat machine bench press",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Pec dec",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Dip machine",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Drop Push",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Single-Arm Push-Up",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Isometric Wipers",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Clock push-up",
+    "focusId": 5,
+    "focus": chest,
+  },
+  {
+    "name": "Board bench press",
+    "focusId": 5,
+    "focus": chest,
+  },
 ]
