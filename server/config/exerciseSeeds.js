@@ -299,6 +299,101 @@
     "focusId": 3,
     "focus": back,
   },
+  {
+    "name": "Leg press",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Cardio",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Jump rope",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Standing Calf Raises",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Seated Calf Raise",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Ankle Circles",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Knee Circles",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Posterior Tibialis Stretch",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Wall calf stretch",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Balance Board",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Smith Machine Calf Raise",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Dumbbell walking calf raise",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "UNS Standing Calf Raise",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Seated Calf Press - Gethin Variation",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Calf Press On A Hack Squat Machine - Gethin Variation",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Agility Ladder",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Standing Calf Raise Facing Hack Squat Machine - Gethin Variation",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Peroneals Stretch",
+    "focusId": 4,
+    "focus": calves,
+  },
+  {
+    "name": "Calf SMR",
+    "focusId": 4,
+    "focus": calves,
+  },
 
 
 ]
