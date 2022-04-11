@@ -199,4 +199,106 @@
     "focusId": 2,
     "focus": arms,
   },
+  {
+    "name": "Standard deadlift",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Pull ups",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Bent over rows",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "T-bar rows",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Barbell shrugs",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Barbell chest supported rows",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Pendley rows",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Trap bar deadlift",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Standing push down",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Hyperextensions",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Lat pulldowns - wide & narrow grip",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Seated rows - wide & narrow grip",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Chin-ups",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Atlas Stones",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Superman",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Suspended row",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Child's pose",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Yates Row",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Decline dumbbell chest fly",
+    "focusId": 3,
+    "focus": back,
+  },
+  {
+    "name": "Back Extension - Gethin Variation",
+    "focusId": 3,
+    "focus": back,
+  },
+
+
 ]
