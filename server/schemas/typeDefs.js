@@ -9,7 +9,7 @@ const typeDefs = gql`
         username: String
         nameLength: Int
         email: String
-        selectedExercisesIds: [ID]
+        createdWorkoutIds: [ID]
     }
     type Auth {
         token: String
@@ -35,7 +35,7 @@ const typeDefs = gql`
     type Mutation {
         createUser(username: String!, email: String!, password: String!): Auth
         login(username: String!, password: String!): Auth
-        selectWorkout(_Id: String!): User
+        createWorkout(_Id: String!): User
 
     }
 `;
