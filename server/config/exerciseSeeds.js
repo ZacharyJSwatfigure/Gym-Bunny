@@ -594,4 +594,105 @@
     "focusId": 6,
     "focus": legs,
   },
+  {
+    "name": "Shoulder press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Bar bell press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Dumbell pull ups",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Arnold press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Dumbbell lateral raises",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Dumbbell front raises",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Dumbbell reverse flys",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Machine lat raise",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Cable face pulls",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Seated barbell shoulder press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Cuban press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Clean and jerk",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Smith machine shrug",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Power Partials",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Battle ropes",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Standing Bradford press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Handstand push-up",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Front Plate Raise",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Car driver",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+  {
+    "name": "Alternating Kettlebell Press",
+    "focusId": 7,
+    "focus": shoulders,
+  },
+
 ]
