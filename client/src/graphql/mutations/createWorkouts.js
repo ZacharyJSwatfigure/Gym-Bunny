@@ -19,8 +19,8 @@ import { gql } from '@apollo/client';
 // this is one that we added for thie new schema stuff
 
 export const ADD_WORKOUT = gql`
-    mutation selectWorkout($_id: String!) {
-        selectWorkout(_id: $_id) {
+    mutation createWorkout($_id: String!) {
+        createWorkout(_id: $_id) {
             _id
             email
             username
