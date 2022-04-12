@@ -3,7 +3,7 @@ const { isEmail } = require('validator');
 
 
 const userSchema = new Schema({
-	username:{
+	username: {
 		type: String,
 		required: true,
 		trim: true,
@@ -21,11 +21,23 @@ const userSchema = new Schema({
 			},
 		},
 	},
-	password:{
+	password: {
 		type: String,
 		required: true,
 		trim: true
 	},
-});
+	selectedExercisesIds: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "Workout",
+		},
+	],
+},
+	{
+		toJSON: {
+			virtuals: true,
+		},
+	}
+);
 
 module.exports = model('User', userSchema);
