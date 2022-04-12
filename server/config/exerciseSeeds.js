@@ -494,4 +494,104 @@
     "focusId": 5,
     "focus": chest,
   },
+  {
+    "name": "Squats",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Leg press",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Lunges",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Barbell back squats",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Good mornings",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Barbell hip thrusts",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Hack squat",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Goblet squat",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Dumbbell step-ups",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Leg extension",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Leg curl",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Hack squat machine",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Dumbbell glute bridges",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Glute ham raise-",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Lying Leg Curls",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Power clean",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Box jump",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Standing leg swing",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Dumbbell Clean",
+    "focusId": 6,
+    "focus": legs,
+  },
+  {
+    "name": "Inchworm",
+    "focusId": 6,
+    "focus": legs,
+  },
 ]
