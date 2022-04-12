@@ -1,15 +1,13 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { Workout, User } = require('../models');
-const utils = require('../utils');
-
+const { AuthenticationError } = require("apollo-server-express");
+const { Workout, User } = require("../models");
+const utils = require("../utils");
 const resolvers = {
 	Query: {
 		user: async (_root, { id }) => {
 			return await User.findById(id);
 		},
-		users: async (_root, _args, context) => {
+		users: async (_root, args) => {
 			// if (context.user) {
-
 			return await User.find({});
 			// }
 			// throw new AuthenticationError('You must be logged in to do that');
@@ -18,9 +16,9 @@ const resolvers = {
 			return await Workout.findById(id);
 		},
 		workouts: async () => {
-			return await Workout.find({});
-		}
-
+			const workouts = await Workout.find({});
+			return workouts;
+		},
 	},
 	Mutation: {
 		// Sign up
@@ -30,21 +28,19 @@ const resolvers = {
 				email,
 				password,
 			});
-
 			const token = utils.signToken(user.username, user._id);
 			return { token, user };
 		},
 		login: async (_root, { username, password }) => {
 			const userFound = await User.findOne({ username });
-
 			if (!userFound) {
-				throw new AuthenticationError('No user found with this email');
+				throw new AuthenticationError("No user found with this email");
 			}
 			if (userFound.password === password) {
 				const token = utils.signToken(userFound.username, userFound._id);
 				return { token, userFound };
 			}
-			throw new AuthenticationError('You must provide correct credentials');
+			throw new AuthenticationError("You must provide correct credentials");
 		},
 		createWorkout: async (parent, { _id }, context) => {
 			if (context.user) {
@@ -60,20 +56,17 @@ const resolvers = {
 				}
 			}
 		},
-
-		User: {
-			username: (root) => {
-				return `${root.username}`;
-			},
-			nameLength: (root) => {
-				return root.username.length;
-			},
-			createWorkouts: async (root) => {
-				return await Workout.find({ _id: { $in: root.createdWorkoutIds } });
-			},
-
+	},
+	User: {
+		username: (root) => {
+			return `${root.username}`;
+		},
+		nameLength: (root) => {
+			return root.username.length;
+		},
+		createWorkouts: async (root) => {
+			return await Workout.find({ _id: { $in: root.createdWorkoutIds } });
 		},
 	},
-}
-
+};
 module.exports = resolvers;

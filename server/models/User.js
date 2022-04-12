@@ -26,7 +26,7 @@ const userSchema = new Schema({
 		required: true,
 		trim: true
 	},
-	selectedExercisesIds: [
+	createdWorkoutIds: [
 		{
 			type: Schema.Types.ObjectId,
 			ref: "Workout",
