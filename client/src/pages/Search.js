@@ -4,37 +4,42 @@ import { useQuery } from "@apollo/client";
 import { FETCH_EXERCISES } from "../graphql/queries/fetchExercises";
 
 export default function Search() {
-  const [focusId, setFocusId] = useState({
-    focusId: null,
-  });
+  const [focusId, setFocusId] = useState("");
+
   const [fetchedExercises, setFetchedExercises] = useState([]);
 
-  const [exercise] = useQuery(FETCH_EXERCISES);
+  const { exercises } = useQuery(FETCH_EXERCISES);
 
-  const searchExercise = async (event) => {
-    event.preventDefault();
-    const response = await exercise({
+  const handleOnChange = (e) => {
+    e.preventDefault();
+    const newFocusId = e.target.value.toString();
+    setFocusId(newFocusId);
+  };
+
+  const handleOnSearch = async () => {
+    const res = await exercises({
       variables: {
         focusId,
       },
     });
-  };
-
-  const handleChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-
-    setFocusId({
-      ...focusId,
-      [name]: value,
-    });
+    setFetchedExercises(res);
   };
 
   return (
     <div>
-      <button onClick={handleChange} value="1">
-        abs
-      </button>
+      <input onChange={handleOnChange} />
+      <button onClick={handleOnSearch}>Search</button>
+      <div>
+        {fetchedExercises.map((e, index) => {
+          return (
+            <div>
+              <h1>{e.name}</h1>
+              <p>{e.focusId}</p>
+              <p>{e.userId}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
