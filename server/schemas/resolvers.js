@@ -42,12 +42,12 @@ const resolvers = {
 			}
 			throw new AuthenticationError("You must provide correct credentials");
 		},
-		createWorkout: async (parent, { _id }, context) => {
-			if (context.user) {
+		createWorkout: async (parent, { workoutId }, context) => {
+			if (context.req.user) {
 				try {
 					const user = await User.findOneAndUpdate(
-						{ _id: context.user._id },
-						{ $push: { createdWorkoutIds: _id } }
+						{ _id: context.req.user._id, },
+						{ $push: { createdWorkoutIds: workoutId } }
 					);
 					return user;
 				} catch (error) {
@@ -64,7 +64,7 @@ const resolvers = {
 		nameLength: (root) => {
 			return root.username.length;
 		},
-		createWorkouts: async (root) => {
+		createdWorkoutIds: async (root) => {
 			return await Workout.find({ _id: { $in: root.createdWorkoutIds } });
 		},
 	},
