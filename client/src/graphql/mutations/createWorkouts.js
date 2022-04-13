@@ -1,19 +1,15 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const CREATE_WORKOUT = gql`
-    mutation createWorkout($workout: String!, $createdWorkoutIds: [String!]) {
-        createWorkout(workout: $workout, createdWorkoutIds: $createdWorkoutIds) {
-            _id
-            username
-            workouts {
-                _id
-                name
-                focus
-            }
-        }
+  query createWorkout($focusId: String) {
+    workouts(focusId: $focusId) {
+      _id
+      name
+      userId
+      focusId
     }
+  }
 `;
-
 
 // this is one that we added for thie new schema stuff
 
@@ -26,4 +22,3 @@ export const CREATE_WORKOUT = gql`
 //         }
 //     }
 // `;
-
