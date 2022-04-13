@@ -7,8 +7,6 @@ const typeDefs = gql`
     username: String
     nameLength: Int
     email: String
-    createdWorkoutIds: [Workout]
-    
   }
   type Auth {
     token: String
@@ -18,23 +16,23 @@ const typeDefs = gql`
     _id: ID
     name: String
     focusId: String
+    userId: String
+    # watch ^
   }
   type Query {
     user(id: String!): User
-    users: [User!]!
-    workout(id: String!): Workout
-    workouts: [Workout!]!
+    workouts(focusId: String): [Workout]
+    exercises(focusId: String): [Workout]
   }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
+    updateUser(username: String, email: String, password: String): ID
     login(username: String!, password: String!): Auth
-    createWorkout(workoutId: String!): Workout
-    deleteWorkout(createdWorkoutIds: [String]!): Workout
+    logout: ID
+    createWorkout(focusId: String!, name: String!): Workout
+    deleteWorkout(id: String!): ID
   }
-  
 `;
 module.exports = typeDefs;
-
-
 
 // createWorkouts: [Workout] add back to user if I mess up

@@ -1,7 +1,9 @@
-const Workout = require('./Workout');
-const User = require('./User');
+const Workout = require("./Workout");
+const User = require("./User");
+const Token = require("./token");
 
 module.exports = {
-	Workout,
-	User,
+  Workout,
+  User,
+  Token,
 };
