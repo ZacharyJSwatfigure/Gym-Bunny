@@ -6,6 +6,7 @@ query fetchWorkouts {
     workouts{
     _id
     name
+    focusId
     }
 }
 `;
