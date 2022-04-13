@@ -1,14 +1,13 @@
 import { gql } from '@apollo/client';
 
 // export const CREATE_WORKOUT = gql`
-//     mutation createWorkout($workout: String!, $userId: String!, $completed: Boolean) {
-//         createWorkout(workout: $workout, userId: $userId, completed: $completed) {
+//     mutation createWorkout($workout: String!, $userId: String!) {
+//         createWorkout(workout: $workout, userId: $userId) {
 //             _id
 //             username
 //             workouts {
 //                 _id
-//                 exercise
-//                 completed
+//                 name
 //                 focus
 //             }
 //         }
@@ -18,12 +17,11 @@ import { gql } from '@apollo/client';
 
 // this is one that we added for thie new schema stuff
 
-export const ADD_WORKOUT = gql`
+export const CREATE_WORKOUT = gql`
     mutation createWorkout($_id: String!) {
         createWorkout(_id: $_id) {
             _id
-            email
-            username
+            
         }
     }
 `;
