@@ -1,58 +1,39 @@
-// import React from 'react';
-// import '../style/Search.css';
-// import { useMutation } from '@apollo/client';
-// import { ADD_WORKOUT } from '../graphql/mutations/createWorkouts';
+import React from 'react';
+import '../style/Search.css';
+import { useQuery } from '@apollo/client';
+import { FETCH_WORKOUTS } from '../graphql/queries/fetchWorkouts';
 
-// export default function Search() {
+export default function Search() {
 
-//     const [workoutState, setWorkoutState] = React.useState({
-//         focusId: "",
-//     })
+    const FindAbs = async () => {
+        const search = useQuery(FETCH_WORKOUTS);
+        await search({
+            variables: {
+                focusId: 1
+            }
+        })
+    };
 
-//     const [addWorkout] = useMutation(ADD_WORKOUT);
-
-//     const searchWorkout = async (search) => {
-//         search.preventDefault();
-//         const res = await searchWorkout({
-//             variables: {
-//                 focusId: workoutState.focusId
-//             }
-//         })
-
-//         setWorkoutState({
-//             focusId: "",
-//         })
-//     }
-
-//     const handleChange = (e) => {
-//         const { focusId, value } = e.target
-
-//         setWorkoutState({
-//             ...workoutState,
-//             [focusId]: value,
-//         })
-//     }
-
-//     return (
-//         <section>
-//             <form onSubmit={searchWorkout}>
-//                 <h1>Body Category:
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Abs</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Arms</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Back</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Calves</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Chest</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Legs</button>
-//                     <button name = 'focusId' type = 'submit' onClick={handleChange}>Shoulders</button>
-//                 </h1>
-//             </form>
+    return (
+        <section>
+            <form>
+                <h1>Body Category:
+                    <button onClick={FindAbs} value = '1'>Abs</button>
+                    <button value = '2' type = 'submit'>Arms</button>
+                    <button value = '3' type = 'submit'>Back</button>
+                    <button value = '4' type = 'submit'>Calves</button>
+                    <button value = '5' type = 'submit'>Chest</button>
+                    <button value = '6' type = 'submit'>Legs</button>
+                    <button value = '7' type = 'submit'>Shoulders</button>
+                </h1>
+            </form>
 
             
 
 
 
             
-//         </section>
-//     );
-// }
+        </section>
+    );
+}
 

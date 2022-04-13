@@ -28,8 +28,7 @@ const userSchema = new Schema({
 	},
 	createdWorkoutIds: [
 		{
-			type: Schema.Types.ObjectId,
-			ref: "Workout",
+			type: String,
 		},
 	],
 },
