@@ -56,6 +56,26 @@ const resolvers = {
 				}
 			}
 		},
+		deleteWorkout: async (parent, { deleteWorkoutId, createdWorkoutIds, workoutId }, context) => {
+			if (context.req.user) {
+				try {
+					const index = createdWorkoutIds.findIndex(deleteWorkoutId);
+					
+					const user = await User.findOneAndUpdate(
+						{ _id: context.req.user._id, },
+						{ $push: { createdWorkoutIds: workoutId } }
+					);
+					return user;
+				
+				
+				
+				
+				} catch (error) {
+					console.log(error);
+					return error;
+				}
+			}
+		},
 	},
 	User: {
 		username: (root) => {
