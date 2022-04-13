@@ -22,6 +22,7 @@ const typeDefs = gql`
   type Query {
     user(id: String!): User
     workouts(focusId: String): [Workout]
+    exercises(focusId: String): [Workout]
   }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth

@@ -23,6 +23,15 @@ const resolvers = {
       const workouts = await Workout.find(query);
       return workouts;
     },
+    exercises: async (_root, args, context) => {
+      const { focusId } = args;
+      const query = {};
+      if (focusId) {
+        query["focusId"] = focusId;
+      }
+      const workouts = await Workout.find(query);
+      return workouts;
+    },
   },
   Mutation: {
     // Sign up

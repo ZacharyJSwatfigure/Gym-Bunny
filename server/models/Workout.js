@@ -14,7 +14,7 @@ const workoutSchema = new Schema(
     },
     userId: {
       type: Schema.Types.ObjectId,
-      required: true,
+      required: false,
       ref: "User",
     },
   },
