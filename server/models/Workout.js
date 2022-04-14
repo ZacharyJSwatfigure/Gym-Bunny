@@ -2,21 +2,25 @@ const { Schema, model } = require("mongoose");
 
 const workoutSchema = new Schema(
   {
-    name: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    focusId: {
-      type: String,
-      required: true,
-      trim: true,
-    },
     userId: {
       type: Schema.Types.ObjectId,
-      required: false,
+      required: true,
       ref: "User",
     },
+    exercises: [
+      {
+        name: {
+          type: String,
+          required: true,
+          trim: true,
+        },
+        focusId: {
+          type: String,
+          required: true,
+          trim: true,
+        },
+      },
+    ],
   },
   {
     toJSON: {
