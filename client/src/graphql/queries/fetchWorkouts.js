@@ -1,12 +1,11 @@
-
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const FETCH_WORKOUTS = gql`
-query fetchWorkouts {
-    workouts{
-    _id
-    name
-    focusId
+  query fetchWorkouts {
+    workouts {
+      _id
+      name
+      focusId
     }
-}
+  }
 `;
