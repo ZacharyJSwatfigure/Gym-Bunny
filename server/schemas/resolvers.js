@@ -1,6 +1,8 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { Workout, User } = require("../models");
+
+const { Exercise, Workout, User } = require("../models");
 const utils = require("../utils");
+
 const resolvers = {
   Query: {
     user: async (_root, args, context) => {
@@ -13,14 +15,7 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError("No user by this Id");
       }
-      const { focusId } = args;
-      const query = {
-        userId: context.user._id,
-      };
-      if (focusId) {
-        query["focusId"] = focusId;
-      }
-      const workouts = await Workout.find(query);
+      const workouts = await Workout.find({ userId: context.user._id });
       return workouts;
     },
     exercises: async (_root, args, context) => {
@@ -29,12 +24,11 @@ const resolvers = {
       if (focusId) {
         query["focusId"] = focusId;
       }
-      const workouts = await Workout.find(query);
-      return workouts;
+      const exercise = await Exercise.find(query);
+      return exercise;
     },
   },
   Mutation: {
-    // Sign up
     createUser: async (_root, args) => {
       const user = await User.create(args);
       const token = utils.signToken(user.username, user._id);
@@ -66,40 +60,40 @@ const resolvers = {
       const expiredToken = await Token.create({ token });
       return expiredToken._id;
     },
-
-    createWorkout: async (parent, args, context) => {
-      if (!context.user) {
-        throw new AuthenticationError(
-          "You must be logged in to perform this action"
-        );
-      }
+    createExercise: async (parent, args, context) => {
       try {
         const { focusId, name } = args;
-        const workout = await Workout.create({
-          userId: context.user._id,
+        const exercise = await Exercise.create({
           focusId,
           name,
         });
-        return workout;
+        return exercise;
       } catch (error) {
         console.log(error);
         return error;
       }
     },
-    deleteWorkout: async (parent, { id }, context) => {
-      if (!context.user) {
-        throw new AuthenticationError(
-          "You must be logged in to perform this action"
-        );
-      }
+    deleteExercise: async (parent, { id }, context) => {
       try {
-        const deletedWorkout = await Workout.findByIdAndDelete(id);
-        return deletedWorkout._id;
+        const deletedExercise = await Exercise.findByIdAndDelete(id);
+        return deletedExercise._id;
       } catch (error) {
         console.log(error);
         return error;
       }
+    },
+    createWorkout: async (parent, args, context) => {
+      if (!context.user) {
+        throw new AuthenticationError("No user by this Id");
+      }
+      const { exercises } = args;
+      const createdWorkout = await Workout.create({
+        userId: context.user._id,
+        exercises,
+      });
+      return createdWorkout._id;
     },
   },
 };
+
 module.exports = resolvers;
