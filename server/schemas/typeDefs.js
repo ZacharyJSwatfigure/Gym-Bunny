@@ -1,5 +1,5 @@
-/* typeDefs is short for typeDefinitions */
 const { gql } = require("apollo-server-express");
+
 // Queries and Mutations
 const typeDefs = gql`
   type User {
@@ -14,25 +14,32 @@ const typeDefs = gql`
   }
   type Workout {
     _id: ID
+    userId: ID
+    exercises: [Exercise]
+  }
+  type Exercise {
+    _id: ID
     name: String
     focusId: String
-    userId: String
-    # watch ^
+  }
+  input ExerciseInput {
+    name: String!
+    focusId: String!
   }
   type Query {
-    user(id: String!): User
-    workouts(focusId: String): [Workout]
-    exercises(focusId: String): [Workout]
+    user: User
+    workouts: [Workout]
+    exercises(focusId: String): [Exercise]
   }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
     updateUser(username: String, email: String, password: String): ID
     login(username: String!, password: String!): Auth
     logout: ID
-    createWorkout(focusId: String!, name: String!): Workout
-    deleteWorkout(id: String!): ID
+    createExercise(focusId: String!, name: String!): Exercise
+    deleteExercise(id: ID!): ID
+    createWorkout(exercises: [ExerciseInput]!): ID
   }
 `;
-module.exports = typeDefs;
 
-// createWorkouts: [Workout] add back to user if I mess up
+module.exports = typeDefs;
