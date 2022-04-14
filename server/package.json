@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "concurrently \"npm run seed\" \"nodemon server.js\"",
-    "server" : "nodemon server.js",
-    "seed": "node ./config/seeds.js"
+    "start": "node src/server.js",
+    "dev": "concurrently \"npm run seed\" \"nodemon src/server.js\"",
+    "server": "nodemon src/server.js",
+    "seed": "node src/config/seeds.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,7 @@
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15",
     "validator": "^13.7.0"
   }
 }

@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const workoutSchema = new Schema(
+const exerciseSchema = new Schema(
   {
     name: {
       type: String,
@@ -12,11 +12,6 @@ const workoutSchema = new Schema(
       required: true,
       trim: true,
     },
-    userId: {
-      type: Schema.Types.ObjectId,
-      required: false,
-      ref: "User",
-    },
   },
   {
     toJSON: {
@@ -25,4 +20,4 @@ const workoutSchema = new Schema(
   }
 );
 
-module.exports = model("Workout", workoutSchema);
+module.exports = model("Exercise", exerciseSchema);
