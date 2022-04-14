@@ -1,8 +1,10 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/gym-bunny', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+const mongoUri = "mongodb://localhost:27017/gym-bunny";
+
+mongoose.connect(mongoUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 module.exports = mongoose.connection;
