@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Issues][issues-shield]][issues-url]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Gym Bunny
+
+## Table of Contents
+* [Description](#description)
+* [Available Scripts](#available-scripts)
+* [Built With](#built-with)
+* [License](#license)
+* [Credits](#credits)
+* [Questions](#questions)
+
+## Description:
+This app is tailored toward new gym goers. The user can pick and choose specific areas of the body to focus on and build a customized workout. When they like a particular exercise, they can save it to their account and quickly reference it when they log back in at a later time.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Available Scripts
 
@@ -49,22 +63,63 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### To Install NPM Packages
+* Use the command "npm init-y" to install Node Package Manager
+* Use the command "npm i" or "npm install" to install dependency packages needed
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Making a Progressive Web App
+## Built With
+- FRONT-END: React, CSS, HTML, Javascript
+- BACK-END: Javascript, GraphQL, Apollo, MongoDB
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Project Link
 
-### Advanced Configuration
+[Portfolio Repository](https://github.com/nparker80/MouseQuest)
+<br>
+[Deployed Application](https://newmousequestdu.herokuapp.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License 
+This project is licensed under MIT
 
-### Deployment
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+List of Contributors:
 
-### `npm run build` fails to minify
+1. Jesus Balandra 
+2. Giovanni Domino
+3. Najla Parker
+4. Zachary Swatfigure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Questions
+
+Najla Parker - najla08@me.com [![GitHub][github-shield]][github-url-naj]
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact Info
+
+Zachary Swatfigure - [![GitHub][github-shield]][github-url-Zach] </br>
+Giovanni Domino - [![GitHub][github-shield]][github-url-giovanni] </br>
+Jesus Balandra - [![GitHub][github-shield]][github-url-Jesus] </br>
+Najla Parker - [![GitHub][github-shield]][github-url-naj]
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/nparker80/MouseQuest.svg?style=for-the-badge
+[contributors-url]: https://github.com/nparker80/MouseQuest/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/nparker80/MouseQuest.svg?style=for-the-badge
+[forks-url]: https://github.com/nparker80/MouseQuest/network/members
+[issues-shield]: https://img.shields.io/github/issues/nparker80/MouseQuest.svg?style=for-the-badge
+[issues-url]: https://github.com/nparker80/MouseQuest/issues
+[license-shield]: https://img.shields.io/github/license/nparker80/MouseQuest.svg?style=for-the-badge
+[license-url]: https://github.com/nparker80/MouseQuest/blob/master/LICENSE.txt
+[github-shield]: https://img.shields.io/badge/-Github-blueviolet.svg?style=for-the-badge&logo=Github&colorB=555
+[github-url-Zach]: https://github.com/ZacharyJSwatfigure
+[github-url-giovanni]: https://github.com/GiovanniDomino
+[github-url-Jesus]: https://github.com/OddTK
+[github-url-naj]: https://github.com/nparker80
+
