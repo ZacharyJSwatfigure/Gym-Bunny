@@ -1,3 +1,4 @@
+/* typeDefs is short for typeDefinitions */
 const { gql } = require("apollo-server-express");
 
 // Queries and Mutations
