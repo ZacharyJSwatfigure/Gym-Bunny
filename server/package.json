@@ -5,9 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js",
-    "dev": "concurrently \"npm run seed\" \"nodemon src/server.js\"",
-    "server": "nodemon src/server.js",
+    "start": "concurrently \"npm run seed\" \"nodemon src/server.js\"",
+    "watch": "nodemon src/server.js",
     "seed": "node src/config/seeds.js"
   },
   "keywords": [],
@@ -24,4 +23,4 @@
     "nodemon": "^2.0.15",
     "validator": "^13.7.0"
   }
-}
+} 

@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i"
+    "start": "node server/src/server.js",
+    "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "build": "cd client && npm run build"
   },
   "keywords": [],
   "author": "",
