@@ -10,8 +10,6 @@
     "build": "cd client && npm run build"
   },
   "keywords": [],
-
-  
   "author": "",
   "license": "ISC",
   "devDependencies": {

@@ -5,6 +5,7 @@ const utils = require("./utils");
 const { resolvers, typeDefs } = require("./schemas");
 const db = require("./config/connection");
 const { User, Token } = require("./models");
+const path = require('path');
 
 const server = new ApolloServer({
   resolvers,
