@@ -564,4 +564,5 @@ db.once("open", async () => {
   ]);
 
   console.log("exercise has been seeded");
+
 });
