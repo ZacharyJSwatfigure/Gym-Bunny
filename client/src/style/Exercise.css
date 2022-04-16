@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 75, 204);
+  width: 40%;
+  margin: 0 auto; 
+  margin-top: 2%;
+  border-radius:  60px;
+  height: 75px;
+
+}
+
+.title {
+  background-color: transparent;
+  
+}
+
+.exerciseSpan {
+  background-color: transparent;
+}
+
+.description {
+  color: white;
+  background-color: rgb(46, 63, 145);
+  border-radius: 60px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.addBtn {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 60px;
+  width: 70%;
+  height: 70px;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  background-color: rgb(46, 63, 145);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    margin: 0 auto; 
+    margin-top: 2%;
+    border-radius:  60px;
+    height: 75px;
+  
+  }
+  .description {
+    font-size: 18px;
+    border-radius: 60px;
+    font-family: 'Oswald', sans-serif;
+  }
+}
+
