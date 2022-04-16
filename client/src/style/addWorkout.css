@@ -1,9 +1,10 @@
 * {
+    color: red;
     background-color: rgb(33, 34, 39);
 }
 
 .workoutBox {
-    
+
     border-radius: 20px;
     margin: 5%;
 }
