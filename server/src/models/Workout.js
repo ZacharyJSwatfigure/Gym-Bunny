@@ -9,6 +9,13 @@ const workoutSchema = new Schema(
           required: true,
           trim: true,
         },
+        
+        userId: {
+          type: String,
+          required: true,
+          trim: true,
+        },
+
         focusId: {
           type: String,
           required: true,

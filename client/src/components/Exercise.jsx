@@ -9,7 +9,7 @@ export const Exercise = ({ exercise, addToWorkout }) => {
           addToWorkout(exercise);
         }}
       >
-        Add to workout
+        <button>Add to workout</button>
       </span>
     </div>
   );

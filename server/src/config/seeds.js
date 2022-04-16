@@ -1,10 +1,10 @@
 const db = require("./connection");
 
-const { Workout } = require("../models");
+const { Exercise } = require("../models");
 
 db.once("open", async () => {
-  await Workout.deleteMany();
-  const workouts = await Workout.insertMany([
+  await Exercise.deleteMany();
+  const exercises = await Exercise.insertMany([
     {
       name: "Crunches",
       focusId: "1",
@@ -563,5 +563,6 @@ db.once("open", async () => {
     },
   ]);
 
-  console.log("workout has been seeded");
+  console.log("exercise has been seeded");
+
 });
