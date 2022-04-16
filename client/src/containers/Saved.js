@@ -14,7 +14,7 @@ export default function Login() {
           {data.workouts.map((wo, index) => {
             return (
               <div className="workout-item" key={index}>
-                <p>Workout {index}</p>
+                <p className="workoutNumber">Workout {index}</p>
                 {wo.exercises.map((ex, index) => {
                   return <p>{ex.name}</p>;
                 })}

@@ -7,6 +7,7 @@ import { Exercise } from "../components/Exercise";
 
 export default function Search() {
   const [focusId, setFocusId] = useState("");
+  const [test, setTest] = useState("");
 
   const [exercises, setExercises] = useState([]);
 
@@ -37,30 +38,43 @@ export default function Search() {
       name: exercise.name,
       focusId: exercise.focusId,
     };
+    alert(`added ${exercise.name}`);
     updatedExercises.push(newEx);
+    const list = updatedExercises.length.toString();
+    setTest(list);
     setExercises(updatedExercises);
   };
 
   const saveCurrentWorkout = () => {
     const { id } = saveWorkout({ variables: { exercises } });
     console.log(id);
+    alert(`added to saves`);
   };
 
   return (
     <div>
-      <input value={focusId} onChange={handleFocusIdChange} />
-      <button onClick={searchAgain}>Search again</button>
-      {exercises && exercises.length > 0 ? (
-        <div>
-          <p>
-            Exercises in workout:{" "}
-            {exercises.map((ex, index) => {
-              return <p>{ex.name}</p>;
-            })}
-          </p>
-          <button onClick={saveCurrentWorkout}>Save workout</button>
-        </div>
-      ) : null}
+      <select onChange={handleFocusIdChange}>
+        <option value="">All</option>
+        <option value="1">Abs</option>
+        <option value="2">Arms</option>
+        <option value="3">Arms</option>
+        <option value="4">Arms</option>
+        <option value="5">Arms</option>
+        <option value="6">Arms</option>
+        <option value="7">Arms</option>
+      </select>
+      <button onClick={searchAgain}>Search</button>
+      <div>
+        <p>
+          Exercises in workout:{" "}
+          {exercises.map((ex, index) => {
+            return <p>{ex.name}</p>;
+          })}
+        </p>
+
+        <button onClick={saveCurrentWorkout}>Save workout</button>
+      </div>
+
       <div>
         {!data
           ? null
