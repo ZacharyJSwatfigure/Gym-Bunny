@@ -42,13 +42,25 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
 }
-
-db.once("open", async () => {
+const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
-
   server.applyMiddleware({ app });
-  app.listen(PORT, () => console.log("Server running on PORT 3001"));
-});
+
+  db.once("open", () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(
+        `Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`
+      );
+    });
+  });
+};
+
+// Call the async function to start the server
+startApolloServer(typeDefs, resolvers);
