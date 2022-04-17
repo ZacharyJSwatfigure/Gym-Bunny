@@ -9,7 +9,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import { BrowserRouter as Router } from "react-router-dom";
-import Auth from "../utils/auth";
+import Auth from "./utils/auth";
 import App from "./App";
 
 const httpLink = createHttpLink({
