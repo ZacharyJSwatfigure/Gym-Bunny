@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run seed\" \"node src/server.js\"",
     "seed": "node src/config/seeds.js",
-    "watch": "nodemon src/server.js"
+    "server": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
