@@ -9,6 +9,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import { BrowserRouter as Router } from "react-router-dom";
+import Auth from "./utils/auth";
 import App from "./App";
 
 const httpLink = createHttpLink({
@@ -16,7 +17,7 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem("id_token");
+  const token = Auth.getToken();
 
   return {
     headers: {

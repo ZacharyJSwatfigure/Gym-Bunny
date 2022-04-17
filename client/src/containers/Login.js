@@ -21,12 +21,11 @@ export default function Login() {
       },
     });
     const token = data.login.token;
-    Auth.login(token);
+    Auth.login(token, formState.username);
     setFormState({
       username: "",
       password: "",
     });
-    window.localStorage.setItem("username", formState.username);
   };
 
   const handleChange = (event) => {
