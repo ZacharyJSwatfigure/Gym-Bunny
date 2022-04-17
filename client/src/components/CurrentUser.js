@@ -4,7 +4,7 @@ import "../style/currentUser.css";
 import Auth from "../utils/auth";
 
 function CurrentUser() {
-  const loggedInUser = Auth.getUsername;
+  const loggedInUser = Auth.getUsername();
 
   return (
     <section className="currentUserHolder">

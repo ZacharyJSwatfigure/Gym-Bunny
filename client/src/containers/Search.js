@@ -26,8 +26,8 @@ export default function Search() {
     refetch(
       focusId && focusId !== ""
         ? {
-            focusId,
-          }
+          focusId,
+        }
         : null
     );
   };
@@ -38,7 +38,6 @@ export default function Search() {
       name: exercise.name,
       focusId: exercise.focusId,
     };
-    alert(`added ${exercise.name}`);
     updatedExercises.push(newEx);
     const list = updatedExercises.length.toString();
     setTest(list);
@@ -48,7 +47,6 @@ export default function Search() {
   const saveCurrentWorkout = () => {
     const { id } = saveWorkout({ variables: { exercises } });
     console.log(id);
-    alert(`added to saves`);
   };
 
   return (
@@ -57,11 +55,11 @@ export default function Search() {
         <option value="">All</option>
         <option value="1">Abs</option>
         <option value="2">Arms</option>
-        <option value="3">Arms</option>
-        <option value="4">Arms</option>
-        <option value="5">Arms</option>
-        <option value="6">Arms</option>
-        <option value="7">Arms</option>
+        <option value="3">Back</option>
+        <option value="4">Calves</option>
+        <option value="5">Chest</option>
+        <option value="6">Legs</option>
+        <option value="7">Shoulders</option>
       </select>
       <button onClick={searchAgain}>Search</button>
       <div>
@@ -79,14 +77,14 @@ export default function Search() {
         {!data
           ? null
           : data.exercises.map((exercise, index) => {
-              return (
-                <Exercise
-                  key={index}
-                  exercise={exercise}
-                  addToWorkout={addToWorkout}
-                />
-              );
-            })}
+            return (
+              <Exercise
+                key={index}
+                exercise={exercise}
+                addToWorkout={addToWorkout}
+              />
+            );
+          })}
       </div>
     </div>
   );
