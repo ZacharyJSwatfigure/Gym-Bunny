@@ -8,9 +8,11 @@
 * [Description](#description)
 * [Available Scripts](#available-scripts)
 * [Built With](#built-with)
+* [Project Link](#project-link)
 * [License](#license)
 * [Credits](#credits)
 * [Questions](#questions)
+* [Find Us](#find-us)
 
 ## Description:
 This app is tailored toward new gym goers. The user can pick and choose specific areas of the body to focus on and build a customized workout. When they like a particular exercise, they can save it to their account and quickly reference it when they log back in at a later time.
@@ -97,7 +99,7 @@ Najla Parker - najla08@me.com [![GitHub][github-shield]][github-url-naj]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contact Info
+## Find Us
 
 Zachary Swatfigure - [![GitHub][github-shield]][github-url-Zach] </br>
 Giovanni Domino - [![GitHub][github-shield]][github-url-giovanni] </br>
