@@ -54,8 +54,9 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
@@ -74,15 +75,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 ## Built With
 - FRONT-END: React, CSS, HTML, Javascript
 - BACK-END: Javascript, GraphQL, Apollo, MongoDB
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Project Link
 
 [Portfolio Repository](https://github.com/ZacharyJSwatfigure/Gym-Bunny)
 <br>
 [Deployed Application](https://gymbunny1000.herokuapp.com/)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## License 
 This project is licensed under MIT
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Credits
 
@@ -92,6 +96,7 @@ List of Contributors:
 2. Giovanni Domino
 3. Najla Parker
 4. Zachary Swatfigure
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Questions
 
