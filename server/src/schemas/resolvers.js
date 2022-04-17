@@ -1,6 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 
-const { Exercise, Workout, User } = require("../models");
+const { Exercise, Workout, User, Token } = require("../models");
 const utils = require("../utils");
 
 const resolvers = {
@@ -56,8 +56,11 @@ const resolvers = {
       if (!context.user) {
         throw new AuthenticationError("No user by this Id");
       }
+      console.log(context.user);
       const token = context.user.token;
+      console.log(token);
       const expiredToken = await Token.create({ token });
+      console.log(expiredToken);
       return expiredToken._id;
     },
     createExercise: async (parent, args, context) => {
