@@ -35,6 +35,7 @@ export default function Login() {
       ...formState,
       [name]: value,
     });
+    localStorage.setItem("username", formState.username);
   };
 
   return (

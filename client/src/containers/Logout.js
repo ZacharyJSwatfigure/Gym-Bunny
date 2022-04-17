@@ -17,7 +17,7 @@ export default function Logout() {
     if (data) {
       Auth.logout();
     }
-  }
+  };
 
   return <h1>Logout</h1>;
 }

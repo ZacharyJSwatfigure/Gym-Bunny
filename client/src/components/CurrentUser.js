@@ -4,12 +4,12 @@ import "../style/currentUser.css";
 import Auth from "../utils/auth";
 
 function CurrentUser() {
-  const loggedInUser = Auth.getUsername;
+  let loggedInUser = localStorage.getItem("username");
 
   return (
     <section className="currentUserHolder">
       <h1 className="currentUser">
-        Hop to it{loggedInUser ? ", " + loggedInUser : ""}!
+        Hop to it {loggedInUser ? ", " + loggedInUser : ""}!
       </h1>
     </section>
   );
