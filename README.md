@@ -75,9 +75,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 ## Project Link
 
-[Portfolio Repository](https://github.com/nparker80/MouseQuest)
+[Portfolio Repository](https://github.com/ZacharyJSwatfigure/Gym-Bunny)
 <br>
-[Deployed Application](https://newmousequestdu.herokuapp.com/)
+[Deployed Application](https://gymbunny1000.herokuapp.com/)
 
 ## License 
 This project is licensed under MIT
