@@ -1,0 +1,45 @@
+
+
+.headerSaved{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(46, 63, 145);
+  font-family: 'Oswald', sans-serif;
+  width: 50%;
+  border-radius: 15px;
+  color: white
+}
+
+.workoutContainer{
+  margin: 0 auto;
+  background-color: rgb(230, 75, 204);
+  font-family: 'Oswald', sans-serif;
+  width: 50%;
+  border-radius: 15px;
+  color: white;
+}
+
+.workout-item{
+  background-color: rgb(46, 63, 145);
+  width: 50%;
+  margin: 0 auto;
+  padding: 1%;
+  margin-top: 5%;
+  border-radius: 15px;
+}
+
+.workoutNumber{
+  background-color: transparent;
+  text-decoration: underline;
+  line-height: 1;
+}
+
+.workoutOl{
+  border-radius: 15px;
+}
+
+.liWorkout{
+  background-color: transparent;
+}

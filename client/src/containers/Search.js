@@ -26,8 +26,8 @@ export default function Search() {
     refetch(
       focusId && focusId !== ""
         ? {
-          focusId,
-        }
+            focusId,
+          }
         : null
     );
   };
@@ -47,45 +47,68 @@ export default function Search() {
   const saveCurrentWorkout = () => {
     const { id } = saveWorkout({ variables: { exercises } });
     console.log(id);
+    alert(`Workout saved! refresh saved list to view`);
   };
 
   return (
-    <div>
-      <select onChange={handleFocusIdChange}>
-        <option value="">All</option>
-        <option value="1">Abs</option>
-        <option value="2">Arms</option>
-        <option value="3">Back</option>
-        <option value="4">Calves</option>
-        <option value="5">Chest</option>
-        <option value="6">Legs</option>
-        <option value="7">Shoulders</option>
-      </select>
-      <button onClick={searchAgain}>Search</button>
-      <div>
-        <p>
-          Exercises in workout:{" "}
-          {exercises.map((ex, index) => {
-            return <p>{ex.name}</p>;
-          })}
-        </p>
+    <div className="searchAllHolder">
+      <section className="sectionBox">
+        <select className="selectContainer" onChange={handleFocusIdChange}>
+          <option className="dropdownItem" value="">
+            All
+          </option>
+          <option className="dropdownItem" value="1">
+            Abs
+          </option>
+          <option className="dropdownItem" value="2">
+            Arms
+          </option>
+          <option className="dropdownItem" value="3">
+            Back
+          </option>
+          <option className="dropdownItem" value="4">
+            Calves
+          </option>
+          <option className="dropdownItem" value="5">
+            Chest
+          </option>
+          <option className="dropdownItem" value="6">
+            Legs
+          </option>
+          <option className="dropdownItem" value="7">
+            Shoulders
+          </option>
+        </select>
+        <button className="searchButton" onClick={searchAgain}>
+          Search
+        </button>
+        <div>
+          <p className="currentListHeader">
+            Current Exercises in Workout:{" "}
+            {exercises.map((ex, index) => {
+              return <p className="currentListItems">{ex.name}</p>;
+            })}
+          </p>
 
-        <button onClick={saveCurrentWorkout}>Save workout</button>
-      </div>
+          <button className="saveButton" onClick={saveCurrentWorkout}>
+            Save Workout List
+          </button>
+        </div>
 
-      <div>
-        {!data
-          ? null
-          : data.exercises.map((exercise, index) => {
-            return (
-              <Exercise
-                key={index}
-                exercise={exercise}
-                addToWorkout={addToWorkout}
-              />
-            );
-          })}
-      </div>
+        <div>
+          {!data
+            ? null
+            : data.exercises.map((exercise, index) => {
+                return (
+                  <Exercise
+                    key={index}
+                    exercise={exercise}
+                    addToWorkout={addToWorkout}
+                  />
+                );
+              })}
+        </div>
+      </section>
     </div>
   );
 }

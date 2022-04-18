@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/Login.css";
+import "../style/Saved.css";
 import { useQuery } from "@apollo/client";
 import { queries } from "../graphql";
 
@@ -8,16 +8,18 @@ export default function Login() {
   console.log(JSON.stringify(data));
   return (
     <div>
-      <h3>Saved workouts:</h3>
+      <h3 className="headerSaved">Saved workouts:</h3>
       {!data ? null : (
-        <div>
+        <div className="workoutContainer">
           {data.workouts.map((wo, index) => {
             return (
               <div className="workout-item" key={index}>
                 <p className="workoutNumber">Workout {index}</p>
-                {wo.exercises.map((ex, index) => {
-                  return <p>{ex.name}</p>;
-                })}
+                <ol className="workoutOl">
+                  {wo.exercises.map((ex, index) => {
+                    return <li className="liWorkout">{ex.name}</li>;
+                  })}
+                </ol>
               </div>
             );
           })}

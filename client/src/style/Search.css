@@ -43,3 +43,68 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+/* this is my new stuff */
+
+.dropdownItem {
+    background-color: rgb(46, 63, 145);
+    cursor: pointer;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+}
+
+.selectContatiner {
+    color: rgb(46, 63, 145);
+}
+
+.searchAllHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.selectContainer{
+    border: none;
+    background-color: rgb(46, 63, 145);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+
+.searchButton {
+    border: none;
+    background-color: rgb(46, 63, 145);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.selectBox{
+    background-color: rgb(46, 63, 145);
+}
+
+.currentListHeader {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(230, 75, 204);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 0;
+}
+
+.currentListItems{
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(230, 75, 204);
+}
+
+
+.saveButton {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgb(230, 75, 204);
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    font-size:18px;
+}
